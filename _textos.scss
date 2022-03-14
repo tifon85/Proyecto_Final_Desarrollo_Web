@@ -1,0 +1,30 @@
+
+@import "tipografias";
+
+@mixin tipografia ($tipo_fuente, $tamanio_fuente, $alinear_texto){
+    font-family: $tipo_fuente;
+    font-size: $tamanio_fuente;
+    text-align: $alinear_texto;
+}
+
+
+p {
+    @include tipografia($tipo0, 1.2rem, center);
+}
+
+h1 {
+    @include tipografia($tipo1, 4rem, center);
+    font-weight: bold;
+}
+
+h2 {
+    @include tipografia($tipo2, 2.5rem, center);
+    font-weight: bold;
+}
+
+h3 {
+    @include tipografia($tipo2, 1rem, center);
+}
+h4 {
+    @include tipografia($tipo0, 1rem, center);
+}

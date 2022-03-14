@@ -1,0 +1,232 @@
+
+@import "colors";
+@import "tipografias";
+
+/* RESPONSIVE */
+
+@media (min-width: 576px) {
+
+    /* MENU */
+
+    .navBackground {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 25vh;
+        /* degradado */
+        background-color: $color-nav-tablet;
+        background-image: linear-gradient(315deg, $color-nav-tablet 0%, $back-color-nav2-tablet 74%);
+    }
+
+    /* INDEX */
+
+    .seccionIndex {
+        aside {
+            img {
+                width: auto;
+            }
+        }
+    }
+
+    /* PARALLAX */
+
+    .parallax {
+        background-image: url("../img/software-a-medida.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;          
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        align-items: center;
+        h1 {
+            @include tipografia($tipo2, 4rem, center);
+            background-color: $back-color-parallax;
+            margin-top: 20%;
+            font-weight: bold;
+        }
+        p {
+            @include tipografia($tipo0, 2.5rem, center);
+            background-color: $back-color-parallax;
+            text-transform: capitalize;
+        }
+    } 
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+    /* FOOTER */
+
+    footer {
+        grid-area: pie;
+        /*height: 20vh;*/
+        background-color: $back-color-footer;
+    }
+
+    /* PAGINA SERVICIOS */
+
+    .tiposServicios {
+        grid-area: tipoServicio;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        section {
+            justify-items: center;
+            border: solid;
+            /* TRANSICIÓN */
+            transition: border 2ms;
+            &:hover {
+                border: $color-border-servicios solid;
+            }
+        }
+    }
+
+    .consultoria {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        article {
+            margin: auto;
+            padding: 6%;
+        }
+    }
+
+
+    /* FOOTER */
+
+    .datosFooter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        .ayuda {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            text-align: center;
+            width: 50%;
+            padding: 2%;
+        }
+        .rrss {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-end;
+            text-align: center;
+            width: 50%;
+            padding: 2%;
+        }
+    }
+    
+    /* MAIN INDEX*/
+
+    .seccionIndex {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 40vh;
+        padding: 5%;
+        border: solid;
+        align-items: center;
+        article {
+            padding: 5%;
+            h2 {
+                @include tipografia($tipo2, 2rem, center);
+                font-weight: bold;
+            }
+            p{
+                @include tipografia($tipo0, 1.2rem, center);
+            }
+        }
+    }
+
+    #portada {
+        height: 75vh;
+    }
+
+    .orden {
+        order: 10;
+    }
+
+    /* MENU */
+
+    .navBackground {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 25vh;
+        /* degradado */
+        background-image: linear-gradient(to right, $back-color-nav1-desktop 20%,$back-color-nav2-desktop-y-submit 100%);
+    }
+
+    .menuFlex {
+        ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+            li {
+                text-align: right;
+                list-style-type: none;
+                font-size: 150%;
+                font-family: $tipo1;
+                /*background-color: white;*/
+                font-weight: bold;
+                margin: 5%;
+                color: black;
+                &:hover {
+                    background-color: $color-back-hover-desktop;
+                    color: $color-hover-desktop;
+                    text-align: center;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    /*  PAGINA CONTACTO */
+
+    .direccion {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        font-size: 1rem;
+        align-items: center;
+        padding: 5%;
+        .localizacion {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            padding: 10px;
+            height: 100%;
+            flex: 1;
+            .imgLocalizacion {
+                padding: 10%;
+                margin: auto;
+                flex: 1;
+                min-width: 100px;
+                max-width: 200px;
+            }
+            .parrafoLocalizacion {
+                margin: auto;
+                padding: 10%;
+                flex: 2;
+            }
+        }
+    }
+
+}
