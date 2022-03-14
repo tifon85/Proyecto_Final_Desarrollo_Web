@@ -83,8 +83,9 @@ footer {
       font-family: "PT Sans Narrow", sans-serif;
       /*background-color: white;*/
       font-weight: bold;
-      margin: 5%;
-      color: black; }
+      margin: 5%; }
+      .navBackground ul li a {
+        color: black; }
 
 /* LOGO */
 .logoCopyright {
